@@ -32,8 +32,9 @@ public class createUserSprint extends AppCompatActivity {
         bacc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(createUserSprint.this, second_sprint.class);
-                setContentView(R.layout.activity_second_sprint);
+                Intent intent = new Intent(createUserSprint.this, MainActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });

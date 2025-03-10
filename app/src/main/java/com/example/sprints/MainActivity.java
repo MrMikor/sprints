@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, second_sprint.class);
-           setContentView(R.layout.activity_second_sprint);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -52,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, createUserSprint.class);
-                setContentView(R.layout.activity_create_user_sprint);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -68,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, createUserSprint.class);
-                setContentView(R.layout.activity_create_user_sprint);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -77,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PasswordRestart.class);
-                setContentView(R.layout.activity_password_restart);
+                startActivity(intent);
+                finish();
             }
         });
     }

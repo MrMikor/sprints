@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Sprints"
         tools:targetApi="31">
         <activity
+            android:name=".favorite"
+            android:exported="false" />
+        <activity
+            android:name=".supce_place"
+            android:exported="false" />
+        <activity
+            android:name=".filters"
+            android:exported="false" />
+        <activity
+            android:name=".mainScrean"
+            android:exported="false" />
+        <activity
             android:name=".PasswordRestart"
             android:exported="false" />
         <activity

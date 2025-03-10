@@ -35,7 +35,8 @@ public class PasswordRestart extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PasswordRestart.this, MainActivity.class);
-                setContentView(R.layout.activity_main);
+                startActivity(intent);
+                finish();
             }
         });
     }
