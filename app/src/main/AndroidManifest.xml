@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Sprints"
         tools:targetApi="31">
         <activity
+            android:name=".galary_kros"
+            android:exported="false" />
+        <activity
+            android:name=".trashHole"
+            android:exported="false" />
+        <activity
             android:name=".favorite"
             android:exported="false" />
         <activity

@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class supce_place extends AppCompatActivity {
 
-public ImageButton sett,huntt,hert;
+public ImageButton sett,huntt,hert,homebtn,firstkr,secondkr;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -59,6 +59,37 @@ public ImageButton sett,huntt,hert;
             }
         });
 
+        homebtn = findViewById(R.id.homesw);
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(supce_place.this, trashHole.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        secondkr = findViewById(R.id.second_cros);
+        secondkr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(supce_place.this, galary_kros.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        firstkr = findViewById(R.id.first_kros);
+        firstkr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(supce_place.this, galary_kros.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 }

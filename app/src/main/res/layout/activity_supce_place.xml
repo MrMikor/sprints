@@ -233,7 +233,9 @@
             android:background="@color/white"
             android:src="@drawable/void_heart" />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/first_kros"
+            android:background="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/nike_zoom" />
@@ -284,7 +286,9 @@
             android:background="@color/white"
             android:src="@drawable/void_heart" />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/second_cros"
+            android:background="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/nike_zoom" />
@@ -322,6 +326,7 @@
     </LinearLayout>
 </LinearLayout>
     <ImageButton
+        android:id="@+id/homesw"
         android:layout_width="114dp"
         android:layout_height="112dp"
         android:layout_marginBottom="28dp"
