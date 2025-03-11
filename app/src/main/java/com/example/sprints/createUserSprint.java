@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +16,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class createUserSprint extends AppCompatActivity {
 
-    public Button bacc;
+    public TextView bacc,confidench;
+    public Button rest;
+    public EditText names,email,passwords;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -38,6 +42,35 @@ public class createUserSprint extends AppCompatActivity {
 
             }
         });
+        confidench = findViewById(R.id.politica_conf);
+        confidench.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(createUserSprint.this, politika.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+        rest = findViewById(R.id.btnInter);
+        rest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                names = findViewById(R.id.nameuser);
+                email = findViewById(R.id.passwordStroke);
+                passwords = findViewById(R.id.emaistwo);
+                String text = names.getText().toString();
+                String sew = email.getText().toString();
+                String qwex = passwords.getText().toString();
+
+                if (!text.isEmpty() && !sew.isEmpty() && !qwex.isEmpty())
+                {  Intent intent = new Intent(createUserSprint.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();}
+            }
+        });
+
+
 
     }
 }

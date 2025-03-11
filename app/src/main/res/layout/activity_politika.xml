@@ -7,4 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".politika">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+    <ImageButton
+        android:id="@+id/hamburg"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginEnd="170dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/beake"
+        tools:ignore="TouchTargetSizeCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Даю согласие на обработку персональных данных"/>
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

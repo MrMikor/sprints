@@ -12,43 +12,30 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class trashHole extends AppCompatActivity {
+public class MainTrashHole extends AppCompatActivity {
 
-    public ImageButton hullt;
-
-    public Button sett;
-
+    public ImageButton confidench;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_trash_hole);
+        setContentView(R.layout.activity_main_trash_hole);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        hullt = findViewById(R.id.hamburg);
-        hullt.setOnClickListener(new View.OnClickListener() {
+        confidench = findViewById(R.id.hamburg);
+        confidench.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(trashHole.this, supce_place.class);
+                Intent intent = new Intent(MainTrashHole.this, trashHole.class);
                 startActivity(intent);
                 finish();
+
             }
         });
-
-        sett = findViewById(R.id.go_to_pay);
-        sett.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(trashHole.this, MainTrashHole.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
     }
 }

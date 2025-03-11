@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class PasswordRestart extends AppCompatActivity {
 
-    public Button bacc;
+    public ImageButton bacc;
+    public Button relo;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -35,6 +37,16 @@ public class PasswordRestart extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PasswordRestart.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        relo = findViewById(R.id.btnInter);
+        relo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PasswordRestart.this, CreateNewPassword.class);
                 startActivity(intent);
                 finish();
             }

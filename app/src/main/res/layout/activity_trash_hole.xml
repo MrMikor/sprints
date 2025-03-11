@@ -179,6 +179,7 @@
     android:src="@drawable/vectorline"/>
 
         <Button
+            android:id="@+id/go_to_pay"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
