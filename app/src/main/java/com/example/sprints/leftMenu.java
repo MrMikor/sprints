@@ -75,7 +75,7 @@ public class leftMenu extends AppCompatActivity {
        fift.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(leftMenu.this, mall.class);
+                Intent intent = new Intent(leftMenu.this, filters.class);
                 startActivity(intent);
                 finish();
             }
@@ -86,7 +86,7 @@ public class leftMenu extends AppCompatActivity {
         yvedoml.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(leftMenu.this, filters.class);
+                Intent intent = new Intent(leftMenu.this, mall.class);
                 startActivity(intent);
                 finish();
             }
