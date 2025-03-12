@@ -4,8 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,103 +12,97 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class supce_place extends AppCompatActivity {
+public class leftMenu extends AppCompatActivity {
 
-public ImageButton sett,huntt,hert,homebtn,firstkr,secondkr,proff, malls;
+    public FrameLayout first,second,thert,fort,fift,yvedoml,exittex;
 
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_supce_place);
+        setContentView(R.layout.activity_left_menu);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        sett = findViewById(R.id.settingi);
-        sett.setOnClickListener(new View.OnClickListener() {
+        first = findViewById(R.id.prof);
+        first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, filters.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        huntt = findViewById(R.id.hamburg);
-        huntt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, leftMenu.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        hert = findViewById(R.id.favorite);
-        hert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, favorite.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        homebtn = findViewById(R.id.homesw);
-        homebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, trashHole.class);
+                Intent intent = new Intent(leftMenu.this, Profail.class);
                 startActivity(intent);
                 finish();
             }
         });
 
 
-        secondkr = findViewById(R.id.second_cros);
-        secondkr.setOnClickListener(new View.OnClickListener() {
+        second = findViewById(R.id.trash);
+        second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, galary_kros.class);
+                Intent intent = new Intent(leftMenu.this, trashHole.class);
                 startActivity(intent);
                 finish();
             }
         });
 
 
-        firstkr = findViewById(R.id.first_kros);
-        firstkr.setOnClickListener(new View.OnClickListener() {
+        thert = findViewById(R.id.heatr);
+        thert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, galary_kros.class);
+                Intent intent = new Intent(leftMenu.this, favorite.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        proff = findViewById(R.id.btnProfaile);
-        proff.setOnClickListener(new View.OnClickListener() {
+
+        fort = findViewById(R.id.deliv);
+        fort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, Profail.class);
+                Intent intent = new Intent(leftMenu.this, Profail.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        malls = findViewById(R.id.mallClip);
-        malls.setOnClickListener(new View.OnClickListener() {
+       fift = findViewById(R.id.sett);
+       fift.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(supce_place.this, mall.class);
+                Intent intent = new Intent(leftMenu.this, mall.class);
                 startActivity(intent);
                 finish();
             }
         });
+
+
+        yvedoml = findViewById(R.id.mess);
+        yvedoml.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(leftMenu.this, filters.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        exittex = findViewById(R.id.exit);
+        exittex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(leftMenu.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
 
     }
